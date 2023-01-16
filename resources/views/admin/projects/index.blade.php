@@ -27,8 +27,10 @@
                         <th>Id</th>
                         <th>Title</th>
                         <th>slug</th>
+                        <th>Image</th>
                         <th>Difficulty</th>
                         <th>Language</th>
+                        <th>Type</th>
 
                     </tr>
                 </thead>
@@ -38,8 +40,11 @@
                         <td scope="row">{{$project->id}}</td>
                         <td>{{$project->title}}</td>
                         <td>{{$project->slug}}</td>
+                        <td>{{$project->cover_image}}</td>
                         <td>{{$project->difficulty}}</td>
                         <td>{{$project->languages}}</td>
+                        <td>{{ $project->type ? $project->type->name : 'Without Type'}}</td>
+
 
 
                         <td class="d-flex flex-column gap-2">
